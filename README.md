@@ -1,5 +1,11 @@
 # TOTP-Tool
 
+## Install
+
+```shell
+npm i totp-tool
+```
+
 ## Usage
 
 ```javascript
