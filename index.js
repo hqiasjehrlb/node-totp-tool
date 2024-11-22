@@ -42,7 +42,8 @@ function genToken (secret) {
 /**
  * @param {string} secret 
  * @param {string} token 
+ * @param {number} window 
  */
-function verifyToken (secret, token) {
-  return verifyTOTP(token, b32Decode(secret), 1);
+function verifyToken (secret, token, window = 0) {
+  return verifyTOTP(token, b32Decode(secret), window);
 }
