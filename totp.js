@@ -19,7 +19,7 @@ function genTOTP (key) {
 function verifyTOTP (token, key, window) {
   const counter = getCounter();
   for (let i = counter - window; i <= counter + window; i++) {
-    if (genHOTP(key, { counter: i }) === token) {
+    if (genHOTP(key, i) === token) {
       return { delta: i - counter };
     }
   }
